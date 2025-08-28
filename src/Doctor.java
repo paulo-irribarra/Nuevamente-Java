@@ -50,7 +50,7 @@ public class Doctor {
     }
 
     public double rebaja(){
-        if (paciente.estadoPaciente().equals("Sobrepeso") || paciente.estadoPaciente().equals("Obeso")){
+        if (paciente.estadoPaciente().compareToIgnoreCase("Sobrepeso") == 0 || paciente.estadoPaciente().compareToIgnoreCase("Obeso") == 0){
             return 0.3;
         } else {
             return 0.0;
@@ -59,6 +59,6 @@ public class Doctor {
     }
 
     public int totalApagar(){
-        return (int) (valorConsulta * rebaja());
+        return (int) (valorConsulta - rebaja());
     }
 }

@@ -58,7 +58,7 @@ public class Paciente {
             return "Normal";
         }
         if (imc() >= 25 && imc() >30) {
-            return "Sobre peso";
+            return "Sobrepeso";
         }
         if (imc() >=30){
             return "Obeso";
